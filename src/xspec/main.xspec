@@ -15,7 +15,6 @@
         <AUTEUR-NOM-COMPLET>
           <AUT-PRENOM>Florence</AUT-PRENOM>
           <AUT-NOM>LAROCHE-GISSEROT</AUT-NOM>
-          <TOTO/>
         </AUTEUR-NOM-COMPLET>
       </AUTEUR>
     </x:expect>
