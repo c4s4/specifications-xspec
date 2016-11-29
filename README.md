@@ -66,7 +66,7 @@ Exemple de test
 Résultat des tests
 ------------------
 
-On pourra exécuter ce test dans Oxygen ou en ligne de commande. Xspec produit alors un rapport de test qui indique les tests ayant échoué avec la résultat obtenu comparé au résultat attendu :
+On pourra exécuter ce test dans Oxygen ou en ligne de commande. Xspec produit alors un rapport de test qui indique les tests ayant échoué avec le résultat obtenu comparé au résultat attendu :
 
 ![Test en échec](img/echec-test.png)
 
