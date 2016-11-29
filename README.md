@@ -172,3 +172,6 @@ Ce projet permet de nourrir le débat sur :
 ---
 Merci pour votre attention
 ==========================
+
+Des questions ?
+---------------
