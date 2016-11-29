@@ -113,6 +113,8 @@ Enfin, on peut inclure un fichier de tests dans un autre (avec l'élément *impo
 </x:scenario>
 ```
 
+On peut aussi générer un **rapport de couverture de test**, mais il faut une licence entreprise de Saxon.
+
 ---
 Pourquoi utiliser Xspec ?
 -------------------------
