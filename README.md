@@ -88,7 +88,7 @@ Pour l'élément *expect* :
 - Indiquer une condition à tester dans un attribut *test* (avec une expression Xpath dont le résultat est un booléen).
 - Indiquer le résultat attendu par le contenu d'un fichier avec l'attribut *href*.
 
-On écrire plus d'un élément *expect*.
+Il est possible écrire plus d'un élément *expect*.
 
 ---
 Astuces utiles
@@ -100,6 +100,18 @@ Il est aussi utile de savoir que l'on peut :
 - Ignorer tous les autres tests avec l'attribut *focus*.
 
 Enfin, on peut inclure un fichier de tests dans un autre (avec l'élément *import*). On aura alors intérêt à lancer un unique fichier *main.xspec* qui importe tous les autres.
+
+À noter que l'on peut aussi tester une fonction, avec un test de la forme :
+
+```xml
+<x:scenario label="Date publication août">
+  <x:call function="els:date-publication">
+    <x:param select="'2016-08'"/>
+  </x:call>
+  <x:expect label="2016-08 == 2016-3"
+            select="'2016-3'"/>
+</x:scenario>
+```
 
 ---
 Pourquoi utiliser Xspec ?
@@ -118,29 +130,29 @@ Mais surtout, c'est le fait que ces tests soient **automatisés** qui est import
 - Mettre en place une intégration continue.
 
 ---
-Spécifications
---------------
+Spécifications Xspec
+--------------------
 
 En utilisant Xspec et en voyant le rapport de tests, je me suis dit que l'on pourrait documenter la transformation avec un document qui indiquerait sur une colonne l'entrée de la transformation et sur une autre son résultat :
 
 ![Spécifications](img/specifications.png)
 
-Il semble clair que c'est plus expressif que la version Excel habituellement utilisée comme spécifications aux ELS :
+J'ai donc écrit une transformation XSLT pour produire cette page de spécifications à partir d'un jeu de tests Xspec. Cette feuille de style est disponible à l'adresse <https://bitbucket.org/elsgestion/sie-encyclo-ouvrage/src/04f5271a9ff0a4497e926f4c90e90b232a2116aa/src/main/xsl/specifications.xsl>.
+
+---
+Spécifications Excel
+--------------------
+
+Aux ELS, on a pour habitude de spécifier les transformations avec une feuille Excel du type :
 
 ![Spécification Excel](img/excel.png)
 
----
-Intérêt des spécifications Xspec
---------------------------------
-
-L'intérêt de ces spécifications est multiple :
+L'intérêt des spécifications Xspec est multiple :
 
 - Ces spécifications sont **vivantes** : si elles ne correspondent pas à l'implémentation de la transformation, le test Xspec échoue.
 - Du fait qu'elles sont validées lors de tests, elles sont **à jour**.
 - Elles peuvent rendre compte de la richesse structurelle du XML. Ce n'est pas une bête correspondance 1:1 du fichier Excel qui est loin de la réalité.
 - Elles servent de test, écrire ces spécifications n'est donc pas une tâche purement administrative.
-
-Par conséquent, je propose que l'on teste l'utilisation de ces spécifications Xspec pour la spécification des transformations entre formats.
 
 ---
 Exemple de projet réel
@@ -149,6 +161,8 @@ Exemple de projet réel
 Ces tests Xspec ont été mis en œuvre à grande échelle sur le projet de transformation des encyclopédies Dalloz de la DTD Encyclopédie vers la DTD Ouvrage.
 
 Le projet se trouve sur Bitbucket à l'adresse <https://bitbucket.org/elsgestion/sie-encyclo-ouvrage>.
+
+Par conséquent, je propose que l'on teste l'utilisation de ces spécifications Xspec pour la spécification des transformations entre formats.
 
 ---
 Merci pour votre attention
