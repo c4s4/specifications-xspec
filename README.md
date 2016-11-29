@@ -162,7 +162,7 @@ Ces tests Xspec ont été mis en œuvre à grande échelle sur le projet de tran
 
 Le projet se trouve sur Bitbucket à l'adresse <https://bitbucket.org/elsgestion/sie-encyclo-ouvrage>.
 
-Ce projet est un exemple concret de mise en œuvre des tests Xspec à grande échelle et permet de nourrir le débat sur :
+Ce projet permet de nourrir le débat sur :
 
 - La généralisation des tests Xspec en cours de développement.
 - L'utilisation de spécifications Xspec comme outil de communication sur la transformation à réaliser.
