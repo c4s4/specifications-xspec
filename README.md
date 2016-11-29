@@ -70,7 +70,7 @@ On pourra exécuter ce test dans Oxygen ou en ligne de commande. Xspec produit a
 
 ![Test en échec](img/echec-test.png)
 
-Cet affichage de la différence entre l'attendu et le résultat est très pratique pour corriger les tests.
+Cette manière d'afficher la différence entre le résultat de la transformation et le résultat attendu est extrêmement pratique.
 
 ---
 Éléments *context* et *expect*
@@ -101,7 +101,7 @@ Il est aussi utile de savoir que l'on peut :
 
 Enfin, on peut inclure un fichier de tests dans un autre (avec l'élément *import*). On aura alors intérêt à lancer un unique fichier *main.xspec* qui importe tous les autres.
 
-À noter que l'on peut aussi tester une fonction, avec un test de la forme :
+À noter que l'on peut aussi tester une **fonction**, avec un test de la forme :
 
 ```xml
 <x:scenario label="Date publication août">
@@ -133,7 +133,7 @@ Mais surtout, c'est le fait que ces tests soient **automatisés** qui est import
 Spécifications Xspec
 --------------------
 
-En utilisant Xspec et en voyant le rapport de tests, je me suis dit que l'on pourrait documenter la transformation avec un document qui indiquerait sur une colonne l'entrée de la transformation et sur une autre son résultat :
+En utilisant Xspec et en voyant le rapport de tests, je me suis dit que l'on pourrait spécifier la transformation avec un document qui indiquerait sur une colonne l'entrée de la transformation et sur une autre son résultat :
 
 ![Spécifications](img/specifications.png)
 
@@ -162,7 +162,10 @@ Ces tests Xspec ont été mis en œuvre à grande échelle sur le projet de tran
 
 Le projet se trouve sur Bitbucket à l'adresse <https://bitbucket.org/elsgestion/sie-encyclo-ouvrage>.
 
-Par conséquent, je propose que l'on teste l'utilisation de ces spécifications Xspec pour la spécification des transformations entre formats.
+Ce projet est un exemple concret de mise en œuvre des tests Xspec à grande échelle et permet de nourrir le débat sur :
+
+- La généralisation des tests Xspec en cours de développement.
+- L'utilisation de spécifications Xspec comme outil de communication sur la transformation à réaliser.
 
 ---
 Merci pour votre attention
