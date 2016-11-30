@@ -3,14 +3,14 @@
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
                stylesheet="../xsl/main.xsl">
 
-  <x:scenario label="Prénom nom">
+  <x:scenario label="Quand on rencontre un élément auteur">
     <x:context>
       <auteur>
         <aute>Florence LAROCHE-GISSEROT</aute>
       </auteur>
     </x:context>
 
-    <x:expect label="Doit donner...">
+    <x:expect label="On doit le découper en prénom puis nom">
       <AUTEUR>
         <AUTEUR-NOM-COMPLET>
           <AUT-PRENOM>Florence</AUT-PRENOM>

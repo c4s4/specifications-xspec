@@ -37,29 +37,7 @@ Exemple de test
 ---------------
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
-               stylesheet="../../main/xsl/main.xsl">
-
-  <x:scenario label="Prénom nom">
-    <x:context>
-      <auteur>
-        <aute>Florence LAROCHE-GISSEROT</aute>
-      </auteur>
-    </x:context>
-
-    <x:expect label="Doit donner...">
-      <AUTEUR>
-        <AUTEUR-NOM-COMPLET>
-          <AUT-PRENOM>Florence</AUT-PRENOM>
-          <AUT-NOM>LAROCHE-GISSEROT</AUT-NOM>
-        </AUTEUR-NOM-COMPLET>
-      </AUTEUR>
-    </x:expect>
-  </x:scenario>
-
-</x:description>
+#(src/xspec/main.xspec)
 ```
 
 ---
