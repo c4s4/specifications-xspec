@@ -1,6 +1,6 @@
 BUILD_DIR=build
 TITLE=Spécifications Xspec
-DESTINATION=/home/web/slides/specifications-xspec
+DESTINATIONS=/home/web/slides/specifications-xspec casa@sweetohm.org:/home/web/slides/specifications-xspec casa@sweetohm.net:/home/web/slides/specifications-xspec
 OPTIONS={ratio: '4:3'}
 SAXON_HOME=/opt/misc/saxon-he-9.7
 XSPEC_HOME=/home/casa/doc/els/xspec
@@ -48,7 +48,10 @@ archive:
 
 publish:
 	@echo "$(YELLOW)Publishing slides$(CLEAR)"
-	rsync -av $(BUILD_DIR)/ $(DESTINATION)/
+	@for dest in $(DESTINATIONS); do \
+		echo "Publishing to $${dest}..."; \
+		rsync -av $(BUILD_DIR)/ $${dest}/ > /dev/null; \
+	done
 
 clean:
 	@echo "$(YELLOW)Cleaning generated files$(CLEAR)"
