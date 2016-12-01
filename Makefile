@@ -1,6 +1,6 @@
 BUILD_DIR=build
 TITLE=Spécifications Xspec
-DESTINATIONS=/home/web/slides/specifications-xspec casa@sweetohm.org:/home/web/slides/specifications-xspec casa@sweetohm.net:/home/web/slides/specifications-xspec
+DESTINATIONS=casa@sweetohm.org:/home/web/slides/specifications-xspec casa@sweetohm.net:/home/web/slides/specifications-xspec
 OPTIONS={ratio: '4:3'}
 SAXON_HOME=/opt/misc/saxon-he-9.7
 XSPEC_HOME=/home/casa/doc/els/xspec
