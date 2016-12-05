@@ -23,7 +23,7 @@ help:
 slides:
 	@echo "$(YELLOW)Generating slides$(CLEAR)"
 	mkdir -p $(BUILD_DIR)
-	res/markdown-filter README.md > $(BUILD_DIR)/README.md
+	mdpp README.md > $(BUILD_DIR)/README.md
 	cp res/template.html $(BUILD_DIR)/index.html
 	sed -i -e "s/<? TITLE ?>/$(TITLE)/g" $(BUILD_DIR)/index.html
 	sed -i -e "/<? CONTENT ?>/{r $(BUILD_DIR)/README.md" -e "d}" $(BUILD_DIR)/index.html

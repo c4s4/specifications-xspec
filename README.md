@@ -37,7 +37,7 @@ Exemple de test
 ---------------
 
 ```xml
-#(src/xspec/main.xspec)
+@(src/xspec/main.xspec)
 ```
 
 ---
